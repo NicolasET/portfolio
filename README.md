@@ -5,4 +5,4 @@ My portfolio
 Improvements:
 - Make it responsive
 - Lenguaje selector
-- Make form functional
+- Make form functional ✅

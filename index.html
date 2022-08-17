@@ -235,10 +235,12 @@
                         <p class="contact-title">Don't be shy</p>
                         <h2 class="contact-subtitle">Contact me 😁</h2>
                         <div class="wrapper">
-                            <form action="" class="contact-form">
-                                <input type="text" name="name" placeholder="Name" required class="contact-input">
-                                <input type="email" name="email" placeholder="Email" required class="contact-input">
-                                <textarea name="message" placeholder="Message" required
+                            <form class="contact-form" onsubmit="sendEmail(); reset(); return false">
+                                <input type="text" name="name" id="name" placeholder="Name" required
+                                    class="contact-input">
+                                <input type="email" name="email" id="email" placeholder="Email" required
+                                    class="contact-input">
+                                <textarea name="message" id="message" placeholder="Message" required
                                     class="contact-input"></textarea>
                                 <button type="submit" class="btn-submit">Submit Message</button>
                             </form>
@@ -284,6 +286,8 @@
     </main>
     <!-- Back to top -->
     <a href="#top" class="back-to-top" data-back-to-top>BACK TOP</a>
+    <!-- SmtpJS -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- scripts -->
     <script src="./assets/js/index.js"></script>
     <!-- Ionicons -->

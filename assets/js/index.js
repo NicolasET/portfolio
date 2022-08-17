@@ -46,3 +46,17 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+const sendEmail = () => {
+  const from = document.getElementById("email").value;
+  const subject = `Email by: ${document.getElementById("name").value}`;
+  const message = document.getElementById("message").value;
+  const token = "f964ee3a-47d3-43a1-86a7-81edda1b972a";
+  Email.send({
+    SecureToken: token,
+    To: "nicolaset98@gmail.com",
+    From: "nicolaset98@gmail.com",
+    Subject: subject,
+    Body: from + " " + message,
+  }).then((message) => alert(message));
+};
